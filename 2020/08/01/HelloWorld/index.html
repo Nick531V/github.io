@@ -18,23 +18,27 @@
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
   
   <link rel="stylesheet" href="/lib/animate-css/animate.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.min.css">
+  <script src="//cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Mist","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Mist","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta property="og:type" content="article">
-<meta property="og:title" content="HelloWorld">
-<meta property="og:url" content="http://yoursite.com/2020/08/01/HelloWorld/index.html">
-<meta property="og:site_name" content="Fifth Dimension Zone">
+  <meta name="description" content="Welcome!">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello World">
+<meta property="og:url" content="http://yoursite.com/2020/08/01/helloworld/index.html">
+<meta property="og:site_name" content="Q.Z.A">
+<meta property="og:description" content="Welcome!">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-08-01T02:44:58.000Z">
-<meta property="article:modified_time" content="2020-08-01T02:44:58.626Z">
+<meta property="article:published_time" content="2020-08-01T02:08:16.137Z">
+<meta property="article:modified_time" content="2020-12-05T11:36:53.856Z">
 <meta property="article:author" content="qinzhanao">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/08/01/HelloWorld/">
+<link rel="canonical" href="http://yoursite.com/2020/08/01/helloworld/">
 
 
 <script class="page-configurations">
@@ -47,7 +51,7 @@
   };
 </script>
 
-  <title>HelloWorld | Fifth Dimension Zone</title>
+  <title>Hello World | Q.Z.A</title>
   
 
 
@@ -90,7 +94,7 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/atom.xml" title="Fifth Dimension Zone" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="Q.Z.A" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -112,13 +116,14 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Fifth Dimension Zone</h1>
+      <h1 class="site-title">Q.Z.A</h1>
       <i class="logo-line"></i>
     </a>
   </div>
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -132,11 +137,6 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
         <li class="menu-item menu-item-categories">
 
     <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
@@ -144,14 +144,41 @@
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于我</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
           
@@ -184,13 +211,13 @@
     <img class="site-author-image" itemprop="image" alt="qinzhanao"
       src="/images/blog.JPG">
   <p class="site-author-name" itemprop="name">qinzhanao</p>
-  <div class="site-description" itemprop="description"></div>
+  <div class="site-description" itemprop="description">数字芯片设计工程师</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -198,7 +225,16 @@
 </div>
   <div class="links-of-author animated">
       <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+      <span class="links-of-author-item">
         <a href="https://github.com/Nick531V" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Nick531V" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/images/wechat_channel.jpg" title="WeChat → &#x2F;images&#x2F;wechat_channel.jpg"><i class="fab fa-weixin fa-fw"></i>WeChat</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/images/wechat_qcode.jpg" title="微信公众号 → &#x2F;images&#x2F;wechat_qcode.jpg"><i class="fa fa-heart fa-fw"></i>微信公众号</a>
       </span>
   </div>
   <div class="cc-license animated" itemprop="license">
@@ -206,6 +242,16 @@
   </div>
 
 
+  <div class="links-of-blogroll animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.linkedin.com/in/qin-zhanao-3b546b84" title="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;qin-zhanao-3b546b84" rel="noopener" target="_blank">LinkedIn</a>
+        </li>
+    </ul>
+  </div>
 
       </section>
     </div>
@@ -236,22 +282,22 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/01/HelloWorld/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/01/helloworld/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/blog.JPG">
       <meta itemprop="name" content="qinzhanao">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="数字芯片设计工程师">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Fifth Dimension Zone">
+      <meta itemprop="name" content="Q.Z.A">
     </span>
 
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          HelloWorld
+          Hello World
         </h1>
 
         <div class="post-meta">
@@ -261,8 +307,15 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-08-01 10:44:58" itemprop="dateCreated datePublished" datetime="2020-08-01T10:44:58+08:00">2020-08-01</time>
+              <time title="创建时间：2020-08-01 10:08:16" itemprop="dateCreated datePublished" datetime="2020-08-01T10:08:16+08:00">2020-08-01</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-05 19:36:53" itemprop="dateModified" datetime="2020-12-05T19:36:53+08:00">2020-12-05</time>
+              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -280,7 +333,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        
+        <p>  Welcome!</p>
+
     </div>
 
     
@@ -295,7 +349,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yoursite.com/2020/08/01/HelloWorld/" title="HelloWorld">http://yoursite.com/2020/08/01/HelloWorld/</a>
+    <a href="http://yoursite.com/2020/08/01/helloworld/" title="Hello World">http://yoursite.com/2020/08/01/helloworld/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -311,22 +365,12 @@
     <div class="social-list">
 
         <div class="social-item">
-          <a target="_blank" class="social-link" href="/images/wechat_channel.jpg">
+          <a target="_blank" class="social-link" href="/images/wechat_qcode.jpg">
             <span class="icon">
-              <i class="fab fa-weixin"></i>
+              <i class="fa fa-heart"></i>
             </span>
 
-            <span class="label">WeChat</span>
-          </a>
-        </div>
-
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="/atom.xml">
-            <span class="icon">
-              <i class="fa fa-rss"></i>
-            </span>
-
-            <span class="label">RSS</span>
+            <span class="label">微信公众号</span>
           </a>
         </div>
     </div>
@@ -339,13 +383,6 @@
 
 
         
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2020/08/01/hello-world/" rel="prev" title="Hello World">
-      <i class="fa fa-chevron-left"></i> Hello World
-    </a></div>
-      <div class="post-nav-item"></div>
-    </div>
       </footer>
     
   </article>
@@ -451,6 +488,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 

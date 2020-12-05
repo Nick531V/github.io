@@ -18,16 +18,20 @@
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
   
   <link rel="stylesheet" href="/lib/animate-css/animate.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.min.css">
+  <script src="//cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Mist","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Mist","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Fifth Dimension Zone">
+  <meta name="description" content="数字芯片设计工程师">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Q.Z.A">
 <meta property="og:url" content="http://yoursite.com/archives/2020/08/index.html">
-<meta property="og:site_name" content="Fifth Dimension Zone">
+<meta property="og:site_name" content="Q.Z.A">
+<meta property="og:description" content="数字芯片设计工程师">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="qinzhanao">
 <meta name="twitter:card" content="summary">
@@ -45,7 +49,7 @@
   };
 </script>
 
-  <title>归档 | Fifth Dimension Zone</title>
+  <title>归档 | Q.Z.A</title>
   
 
 
@@ -88,7 +92,7 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/atom.xml" title="Fifth Dimension Zone" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="Q.Z.A" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -110,13 +114,14 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Fifth Dimension Zone</h1>
+      <h1 class="site-title">Q.Z.A</h1>
       <i class="logo-line"></i>
     </a>
   </div>
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -130,11 +135,6 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
         <li class="menu-item menu-item-categories">
 
     <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
@@ -142,14 +142,41 @@
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于我</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
           
@@ -182,13 +209,13 @@
     <img class="site-author-image" itemprop="image" alt="qinzhanao"
       src="/images/blog.JPG">
   <p class="site-author-name" itemprop="name">qinzhanao</p>
-  <div class="site-description" itemprop="description"></div>
+  <div class="site-description" itemprop="description">数字芯片设计工程师</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -196,7 +223,16 @@
 </div>
   <div class="links-of-author animated">
       <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+      <span class="links-of-author-item">
         <a href="https://github.com/Nick531V" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Nick531V" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/images/wechat_channel.jpg" title="WeChat → &#x2F;images&#x2F;wechat_channel.jpg"><i class="fab fa-weixin fa-fw"></i>WeChat</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/images/wechat_qcode.jpg" title="微信公众号 → &#x2F;images&#x2F;wechat_qcode.jpg"><i class="fa fa-heart fa-fw"></i>微信公众号</a>
       </span>
   </div>
   <div class="cc-license animated" itemprop="license">
@@ -204,6 +240,16 @@
   </div>
 
 
+  <div class="links-of-blogroll animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.linkedin.com/in/qin-zhanao-3b546b84" title="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;qin-zhanao-3b546b84" rel="noopener" target="_blank">LinkedIn</a>
+        </li>
+    </ul>
+  </div>
 
       </section>
     </div>
@@ -236,33 +282,13 @@
   <div class="post-block">
     <div class="posts-collapse">
       <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 2 篇日志。 继续努力。</span>
+        <span class="collection-header">嗯..! 目前共计 1 篇日志。 继续努力。</span>
       </div>
 
       
     <div class="collection-year">
       <span class="collection-header">2020</span>
     </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-08-01T10:44:58+08:00"
-              content="2020-08-01">
-          08-01
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/08/01/HelloWorld/" itemprop="url">
-            <span itemprop="name">HelloWorld</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
 
   <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
@@ -276,7 +302,7 @@
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2020/08/01/hello-world/" itemprop="url">
+          <a class="post-title-link" href="/2020/08/01/helloworld/" itemprop="url">
             <span itemprop="name">Hello World</span>
           </a>
       </div>
@@ -391,6 +417,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 
